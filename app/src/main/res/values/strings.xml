@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Metronome</string>
+
+
+    <string-array name="first_page_description_text">
+        <item>Suitable</item>
+        <item> for all </item>
+        <item>musicians:\nfrom beginners\nto professionals</item>
+    </string-array>
+
+    <string-array name="second_page_description_text">
+        <item>Create</item>
+        <item> setlists \n</item>
+        <item>\nand play\nwithout distraction</item>
+    </string-array>
+
+    <string-array name="third_page_description_text">
+        <item>Set your own track\n</item>
+        <item>settings and\n</item>
+        <item>be in rhythm</item>
+    </string-array>
+</resources>
