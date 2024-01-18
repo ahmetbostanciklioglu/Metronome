@@ -1,16 +1,19 @@
 package com.ahmet.metronome.presentation.navigation.bottom
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
+
+import android.os.Build
+import androidx.annotation.RequiresApi
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.ahmet.metronome.presentation.ui.metronome.MetronomeScreen
+import com.ahmet.metronome.presentation.ui.settings.SettingsScreen
 
+@RequiresApi(Build.VERSION_CODES.Q)
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun BottomNavGraph(navController: NavHostController, modifier: Modifier = Modifier) {
     NavHost(
@@ -18,7 +21,7 @@ fun BottomNavGraph(navController: NavHostController, modifier: Modifier = Modifi
         startDestination = BottomBarScreen.Metronome.route
     ) {
         composable(route = BottomBarScreen.Metronome.route) {
-            MetronomeScreen()
+            MetronomeScreen(modifier = modifier)
         }
 
         composable(route = BottomBarScreen.Settings.route) {
@@ -27,28 +30,6 @@ fun BottomNavGraph(navController: NavHostController, modifier: Modifier = Modifi
     }
 }
 
-@Composable
-fun MetronomeScreen() {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Green),
-        contentAlignment = Alignment.Center
-    ) {
-
-    }
-}
 
 
 
-@Composable
-fun SettingsScreen() {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Red),
-        contentAlignment = Alignment.Center
-    ) {
-
-    }
-}

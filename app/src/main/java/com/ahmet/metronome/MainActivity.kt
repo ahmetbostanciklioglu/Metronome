@@ -10,7 +10,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.ahmet.metronome.presentation.MetronomeApp
-import com.ahmet.metronome.presentation.ui.splash.SplashScreen
 import com.ahmet.metronome.ui.theme.MetronomeTheme
 
 class MainActivity : ComponentActivity() {
